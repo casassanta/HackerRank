@@ -1,7 +1,10 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import PracticeAlgorithms.simpleArraySum
+import PracticeAlgorithms.solveMeFirst
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main(args: Array<String>) {
+
+
+    // println(solveMeFirst(5,6))   //#1
+    //println(simpleArraySum(Array(2) { it+1 })) //#2
+    
 }
