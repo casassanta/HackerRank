@@ -1,3 +1,3 @@
 package PracticeAlgorithms
 
-fun AVeryBigSum(ar: Array<Long>): Long = ar.sum()
+fun aVeryBigSum(ar: Array<Long>): Long = ar.sum()
