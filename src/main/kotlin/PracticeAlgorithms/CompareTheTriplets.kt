@@ -1,7 +1,6 @@
 package PracticeAlgorithms
 
 fun compareTriplets(a: Array<Int>, b: Array<Int>): Array<Int> {
-
     val hashPoints = HashMap<String, Int>()
     hashPoints["Alice"] = 0
     hashPoints["Bob"] = 0
@@ -19,5 +18,4 @@ fun compareTriplets(a: Array<Int>, b: Array<Int>): Array<Int> {
     }
 
     return arrayOf(hashPoints.getValue("Alice"), hashPoints.getValue("Bob"))
-
 }
