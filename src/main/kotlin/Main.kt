@@ -1,5 +1,7 @@
+import PracticeAlgorithms.birthdayCakeCandles
 import PracticeAlgorithms.diagonalDifferences
 import PracticeAlgorithms.plusMinus
+import PracticeAlgorithms.stairCase
 
 fun main(args: Array<String>) {
 
@@ -15,6 +17,10 @@ fun main(args: Array<String>) {
 
     // println(diagonalDifferences(arrayOf(arrayOf(11,2,4), arrayOf(4,5,6), arrayOf(10,8,-12))))  //#5
 
-    plusMinus(arrayOf(-4, 3, -9, 0, 4, 1)) // #6
+    // plusMinus(arrayOf(-4, 3, -9, 0, 4, 1)) // #6
+
+    // stairCase(5) // #7
+
+    println(birthdayCakeCandles(arrayOf(3,2,1,3)))
 
 }
