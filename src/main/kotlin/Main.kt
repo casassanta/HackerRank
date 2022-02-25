@@ -1,7 +1,4 @@
-import PracticeAlgorithms.birthdayCakeCandles
-import PracticeAlgorithms.diagonalDifferences
-import PracticeAlgorithms.plusMinus
-import PracticeAlgorithms.stairCase
+import PracticeAlgorithms.*
 
 fun main(args: Array<String>) {
 
@@ -21,6 +18,8 @@ fun main(args: Array<String>) {
 
     // stairCase(5) // #7
 
-    println(birthdayCakeCandles(arrayOf(3,2,1,3)))
+    // println(birthdayCakeCandles(arrayOf(3,2,1,3))) // #8
+
+    println(timeConversion("07:05:45PM"))
 
 }
