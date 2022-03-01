@@ -20,6 +20,11 @@ fun main(args: Array<String>) {
 
     // println(birthdayCakeCandles(arrayOf(3,2,1,3))) // #8
 
-    println(timeConversion("07:05:45PM"))
+    // println(timeConversion("07:05:45PM"))  // #9
+
+    //val grades = gradingStudents(arrayOf(73,67,38,33))   // #10
+    //grades.map{ println(it) }                            // #10
+
+    
 
 }
