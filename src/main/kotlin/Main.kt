@@ -27,4 +27,8 @@ fun main(args: Array<String>) {
 
     // countApplesAndOranges(7,11,5,15,arrayOf(-2,2,1), arrayOf(5,-6)) // #11
 
+    // formingMagicSquare(arrayOf(arrayOf(8,3,4), arrayOf(1,5,9), arrayOf(6,7,2)))  // #Special Extra to be finished
+
+    println(numbersLinesJump(4,1,4,2))
+
 }
