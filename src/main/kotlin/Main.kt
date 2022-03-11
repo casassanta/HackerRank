@@ -1,6 +1,4 @@
-import PracticeAlgorithms.divisibleSumPairs
-import PracticeAlgorithms.migratoryBirds
-import PracticeAlgorithms.subArrayDivision
+import PracticeAlgorithms.*
 import java.util.*
 
 fun main(args: Array<String>) {
@@ -48,7 +46,13 @@ fun main(args: Array<String>) {
 
     //println(divisibleSumPairs(6,3,arrayOf(1,3,2,6,1,2)))
 
-    println(migratoryBirds(arrayOf(4,4,3,3,5)))
+    //println(migratoryBirds(arrayOf(4,4,3,3,5)))
+
+    // billDivision(arrayOf(4,6,10), 1, 7)
+
+    //println(salesByMatch(9, arrayOf(10,20,20,10,10,30,50,10,20)))
+
+    println(drawingBook(5,4))
 
 }
 
