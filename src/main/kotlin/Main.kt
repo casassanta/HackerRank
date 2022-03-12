@@ -52,7 +52,10 @@ fun main(args: Array<String>) {
 
     //println(salesByMatch(9, arrayOf(10,20,20,10,10,30,50,10,20)))
 
-    println(drawingBook(5,4))
+    //println(drawingBook(5,4)) - NOT FINISHED
+    //println(countingValleys) NOT FINISHED
+
+    println(catAndMouse(1,3,2))
 
 }
 
