@@ -63,7 +63,9 @@ fun main(args: Array<String>) {
 
     //println(theHurdleRace(4, arrayOf(1,6,3,5,2)))
 
-    println(designerPDFViewer(arrayOf(1,3,1,3,1,4,1,3,2,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5), "abc"))
+    //println(designerPDFViewer(arrayOf(1,3,1,3,1,4,1,3,2,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5), "abc"))
+
+    println(utopianTree(5))
 }
 
 
