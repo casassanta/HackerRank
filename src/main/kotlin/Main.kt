@@ -65,9 +65,108 @@ fun main(args: Array<String>) {
 
     //println(designerPDFViewer(arrayOf(1,3,1,3,1,4,1,3,2,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5), "abc"))
 
-    println(utopianTree(5))
+    // println(utopianTree(5))
+
+    // println(camelcase("guilhermeC"))
+
+    // println(strongPassword(6, "Ab1"))
+
+    // println(twoCharacters("asdcbsdcagfsdbgdfanfghbsfdab"))
+
+    //println(caesarCipher("middle-Outz", 2))
+
+    //println(marsExploration(("SOSSPSSQSSOR")))
+
+    //println(hackerRankInAString("hackerworld"))
+
+    //println(pangrams("We promptly judged antique ivory buckles for the next prize"))
+
+    // OPTIMIZE
+    //val weightedUniformStrings = weightedUniformStrings("abccddde", arrayOf(1,3,12,5,9,10))
+    //for(i in weightedUniformStrings.indices)
+    //    println(weightedUniformStrings[i])
+
+    // FIX
+    //separateTheNumbers("1234\n91011\n99100")
+
+    //println(funnyString("acxz"))
+
+    println(sherlockAndTheValidString("abcdefghhgfedecba"))
 }
 
+fun stackHtml(str: String): String{
+
+    // b, i, em, div, p
+    //"<div><div><b> ola eu sou <voce> </b></div></p>"
+
+    val stack = Stack<String>()
+
+    for(i in str.indices){
+        when{
+            str[i] == '<' && listOf('b','i','p').contains(str[i+1]) && str[i+2] == '>' -> stack.push(str[i+1].toString()).also { println("PUSH $it")}
+            str[i] == '<' && str[i+1] == 'e' && str[i+2] == 'm' && str[i+3] == '>' -> stack.push("em").also { println("PUSH $it")}
+            str[i] == '<' && str[i+1] == 'd' && str[i+2] == 'i' && str[i+3] == 'v' && str[i+4] == '>' -> stack.push("div").also { println("PUSH $it")}
+
+            str[i] == '<' && str[i+1] == '/' && listOf('b','i','p').contains(str[i+2]) && str[i+3] == '>' -> {
+                if(stack.peek() == str[i+2].toString())
+                    stack.pop().also { println("POP $it")}
+                else
+                    return stack.pop().also { println("POP $it")}
+            }
+            str[i] == '<' && str[i+1] == '/' &&  str[i+2] == 'e' && str[i+3] == 'm' && str[i+4] == '>' -> {
+                if(stack.peek() == "em")
+                    stack.pop().also { println("POP $it")}
+                else
+                    return stack.pop().also { println("POP $it")}
+            }
+            str[i] == '<' && str[i+1] == '/' &&  str[i+2] == 'd' && str[i+3] == 'i' && str[i+4] == 'v' && str[i+5] == '>' -> {
+                if(stack.peek() == "div")
+                    stack.pop().also { println("POP $it")}
+                else
+                    return stack.pop().also { println("POP $it")}
+            }
+
+        }
+    }
+
+    return "true"
+}
+
+fun toCamelCase(str: String): String{
+
+    return str.lowercase().split(Regex("[^a-zA-Z]")).mapIndexed { index, string ->
+        if(index != 0){
+            var newString = string.toCharArray()
+            newString[0] = newString[0].uppercaseChar()
+            newString.joinToString("")
+        }else{
+            string
+        }
+    }.joinToString("")
+
+}
+
+fun factor3(S: String): Int{
+
+    var numberArray: CharArray
+    var divisible = mutableSetOf<Int>()
+    var number: Int
+
+    S.toCharArray().forEachIndexed { index,char ->
+        numberArray = S.toCharArray()
+
+        for(i in 0..9){
+            numberArray[index] = i.digitToChar()
+            number = String(numberArray).toInt()
+
+            if (number % 3 == 0) {
+                divisible.add(number)
+            }
+        }
+    }
+
+    return divisible.count()
+}
 
 fun solution2(a: MutableList<Int>): MutableList<Int> {
     val result = mutableListOf<Int>()
@@ -99,6 +198,7 @@ fun solution2(a: MutableList<Int>): MutableList<Int> {
 
 fun solution1(numbers: MutableList<Int>): MutableList<Int> {
     var result = mutableListOf<Int>()
+
     for(i in 0 .. numbers.size -3){
         if((numbers[i] > numbers[i+1] && numbers[i+1] < numbers[i+2]) || (numbers[i] < numbers[i+1] && numbers[i+1] > numbers[i+2]))
             result.add(1)
@@ -109,7 +209,7 @@ fun solution1(numbers: MutableList<Int>): MutableList<Int> {
     return result
 }
 
-fun teste(s: String): Int{
+fun stackDupPop(s: String): Int{
 
     var stack = Stack<Int>()
     val max = 1048575
